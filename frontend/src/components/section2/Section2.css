@@ -1,0 +1,37 @@
+.body{
+    background-color: #05050d;
+}
+.body .image img{
+    display: block;
+    margin: 0 auto;
+}
+.body h2{
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+.body p{
+  text-align: center;
+    width: 30%;
+    margin: 0 auto;
+    color: rgb(146, 157, 185);
+}
+.body .button{
+    margin-top: 1rem;
+}
+.body .button .learn-button{
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    color: #5865F2;
+    text-align: center;
+}
+.body .imagee{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+.body .imagee img{
+    width: 100%;
+}

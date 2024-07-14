@@ -1,0 +1,92 @@
+.section{
+    display: flex;
+    align-items: center;
+    background-color: #05050d;
+    padding: 8rem 0;
+}
+.section .left{
+    width: 60%;
+}
+.section .left .content{
+    width: 80%;
+    margin: 0 auto;
+}
+.section .left h1{
+    width: 85%;
+    font-size: 56px;
+    color: white;
+    font-weight: 600;
+    line-height: 4rem;
+}
+.subtitle {
+    font-size: 18px;
+    margin: 1rem 0;
+    color: rgb(146, 157, 185);
+    width: 85%;
+}
+
+.explore-link {
+    color: #5865F2;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.card {
+    width: 45%;
+    background:none;
+    border-radius: 15px;
+    text-align: left;
+    border: 0.5px solid rgb(37, 40, 46);
+    padding: 1rem;
+}
+.card .icon{
+    margin: 0;
+}
+.card h2 {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 1rem;
+    color: rgb(146, 157, 185);
+}
+
+.learn-more {
+    color: #5865F2;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.uptime {
+    background: url('uptime-icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+.incident {
+    background: url('incident-icon.png') no-repeat center center;
+    background-size: contain;
+}
+.section .right{
+    width: 60%;
+    /* border: 2px solid rgb(19, 194, 6); */
+}
+.section .right img{
+    width: 100%;
+}

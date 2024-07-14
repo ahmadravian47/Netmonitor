@@ -1,0 +1,45 @@
+.footer{
+      background-color: #f8f9fa;
+      display: flex;
+      padding: 1rem 8rem;
+}
+.footer .left{
+    width: 33%;
+}
+.footer .mid{
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer .mid button{
+    font-family: "Poppins", sans-serif;
+    background: none;
+    border: none;
+    text-align: center;
+}
+.footer .mid p{
+    font-size: small;
+    width: 80%;
+    text-align: center;
+}
+.footer .right{
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .right p{
+    font-size: small;
+}
+.footer .left .logo{
+    display: flex;
+}
+.footer .left .logo h3{
+    color: #010101;
+}
+.footer .left p{
+    margin-top: 0.5rem;
+    font-size: small;
+    width: 80%;
+}

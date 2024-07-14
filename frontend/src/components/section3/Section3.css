@@ -1,0 +1,39 @@
+.background{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    background: url('./section3.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 6rem 0;
+}
+.background .logo{
+    display: flex;
+    justify-content: center;
+}
+.background .logo h3{
+    color: #010101;
+}
+.background h1{
+    color: #010101;
+    font-size: 56px;
+    font-weight: 600;
+    text-align: center;
+}
+.background p{
+    font-size: 18px;
+    color: rgb(54 61 78);
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.background .buttons .signup-button {
+    display: block;
+    background-color: #6c63ff;
+    padding:12px ;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    margin: 1rem auto;
+    width: 25%;
+    text-align: center;
+  }
