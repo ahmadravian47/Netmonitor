@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Make sure to create a corresponding CSS file for styling
+import './Navbar.css'; 
 import logo from '../../assets/logo.png'
+
 
 const Navbar = () => {
   return (

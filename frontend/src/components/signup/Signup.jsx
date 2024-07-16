@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './Signup.css'
 import logo from '../../assets/logo.png'
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 export default function Signup() {
+    const navigate=useNavigate();
     const [name,setname]=useState('');
     const [email, setemail] = useState('');
     const [password, setpassowrd] = useState('');
@@ -32,10 +33,17 @@ export default function Signup() {
             if (!response.ok) {
                 alert('User already exists')
             }
+            else{
+                alert('Kindly check your inbox to verify the email');
+            }
         } catch (error) {
             console.error('Error:', error);
         }
     }
+
+    useEffect(()=>{//use effect to send a backend request to see if cookie is valid
+
+    },[])
     return (
         <div className="login-screen">
             <div className="login-container">

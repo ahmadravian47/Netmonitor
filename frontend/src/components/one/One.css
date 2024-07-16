@@ -1,0 +1,73 @@
+.pa{
+    background-color: #1f2433;
+}
+.pa .logo{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: end;
+}
+.pa .logo img{
+    width: 32px;
+}
+.pa .logo h3{
+    color: white;
+}
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .content {
+    width: 35%;
+    margin: 0 auto;
+}
+.main .content button{
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.main h2 {
+    font-size: 32px;
+    color: rgb(147 157 184);
+    font-weight: 600;
+    line-height: 2.5rem;
+    padding-left: 0.5rem;
+}
+
+.main span {
+    color: white;
+}
+
+.main form {
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(47 54 71);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    background-color: #222838;
+}
+
+.main form label {
+    color: rgb(147 157 184);
+    font-size: small;
+    padding-left: 0.5rem;
+}
+
+.main form input {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #171b27;
+    color: rgb(177, 186, 207);
+    font-size: 12px;
+    background: none;
+    border: none;
+    padding:  0.5rem;
+    border: 1px solid rgb(47 54 71);
+    margin-top: 0.5rem;
+}

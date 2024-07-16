@@ -4,8 +4,9 @@ import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home'
 import Login from './components/login/Login'
 import Signup from './components/signup/Signup'
-
+import One from './components/one/One'
 import './App.css';
+import User from './components/user/User';
 
 function App() {
     // const [result, setResult] = useState('');
@@ -32,6 +33,8 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/one" element={<One />} />
+                <Route path="/user" element={<User />} />
             </Routes>
         </div>
     );

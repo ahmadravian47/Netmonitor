@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import './Login.css'
 import logo from '../../assets/logo.png'
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [email, setemail] = useState('');
     const [password, setpassowrd] = useState('');
+    const navigate=useNavigate();
 
     function emailchange(e) {
         setemail(e.target.value);
@@ -26,7 +27,7 @@ export default function Login() {
                 credentials: 'include'
             });
             if(response.status===200){
-                //redirect to user page
+                navigate('/user');
             }
             if (!response.ok) {
                 alert('Invalid email/password')
