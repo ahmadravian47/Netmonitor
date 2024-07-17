@@ -35,8 +35,8 @@ export default function Hero() {
           <h1>Prevent</h1>
           <h1>downtime.</h1>
         </div>
-        <h4>NetMonitor lets you see inside any stack,
-          debug any issue, and resolve any incident. </h4>
+        <h4>
+          Monitor Your Website Seamlessly, Stay Informed Instantly. </h4>
         <div className={`buttons fade-up ${isVisible ? 'active' : ''}`}>
           <Link to="/signup" className='signup-button'>Signup for free </Link>
         </div>

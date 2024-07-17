@@ -1,28 +1,44 @@
-import React from 'react'
-import './Footer.css'
-import black_logo from './black.png'
+import React from 'react';
+import './Footer.css'; // Create a CSS file for styling
 
-export default function Footer() {
+const Footer = () => {
     return (
-        <div className='footer'>
-            <div className='left'>
-                <div className='logo'>
-                    <img src={black_logo}></img>
-                    <h3>NetMonitor</h3>
+        <footer className="footer">
+            <div className="footer-content">
+                <div className="footer-section">
+                    <p className="footer-heading">I am open to work</p>
+                    <p className="footer-text">
+                    I’m currently accepting new projects. Schedule a free consultation to discuss how we can work together
+
+                    </p>
                 </div>
-                <p>Better Stack lets you see inside any stack, debug any issue, and resolve any incident. </p>
+                <div className="footer-section">
+                    <h2 className="footer-title">Let's Collab.</h2>
+                    <div className='flex'>
+                        <ul className="footer-list">
+                            <li className="footer-item bold">Service</li>
+                            <li className="footer-item">Front End Development</li>
+                            <li className="footer-item">Back End development</li>
+                            <li className="footer-item">Full Stack</li>
+                        </ul>
+                        <ul className="footer-list">
+                            <li className="footer-item bold">Connect</li>
+                            <li className="footer-item"><a href="https://www.linkedin.com/in/ahmad-touseef-996788205/" className="footer-link">LinkedIn</a></li>
+                        </ul>
+                        <ul className="footer-list">
+                            <li className="footer-item bold">Get in touch</li>
+                            <li className="footer-item"><a href="mailto:Hi@expoadriana.com" className="footer-link">ahmad.ravian47@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div className='mid'>
-                <button>ahmad.ravian47@gmail.com</button>
-                <button >Linkedin</button>
-
-            </div>
-            <div className='right'>
+            
                 <p className="footer-copyright">
-                    &copy; Copyright 2024 All rights reserved.
+                    &copy; Copyright 2024, Ahmad Touseef. All rights reserved.
                 </p>
-            </div>
 
-        </div>
-    )
-}
+        </footer>
+    );
+};
+
+export default Footer;

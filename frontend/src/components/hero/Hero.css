@@ -1,21 +1,22 @@
 /*---------------fading animations code-------------------*/
 .fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s, transform 1s;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
 }
 
 .fade-up.active {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
+
 /*---------------------------------------------------------*/
 
 
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background: url('./hero.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -23,40 +24,126 @@
     justify-content: center;
     color: white;
 }
-.hero .content .logo{
+
+.hero .content .logo {
     display: flex;
     justify-content: center;
 }
-.hero .content .logo h3{
+
+.hero .content .logo h3 {
     padding-left: 0.5rem;
 }
-.hero .content .h1{
+
+.hero .content .h1 {
     margin: 1rem 0;
 }
-.hero .content .h1 h1{
+
+.hero .content .h1 h1 {
     font-size: 112px;
     letter-spacing: -.025em;
     line-height: 88%;
     text-align: center;
     font-weight: 600;
 }
-.hero .content h4{
+
+.hero .content h4 {
     width: 55%;
     margin: 0 auto;
     text-align: center;
     font-weight: 300;
-    color: rgb(209, 212, 221);
     font-size: large;
+    color: rgb(179, 188, 211);
 }
+
 .hero .content .buttons .signup-button {
     display: block;
     background-color: #6c63ff;
-    padding:12px ;
+    padding: 12px;
     border-radius: 5px;
     color: white;
     text-decoration: none;
     margin: 1rem auto;
     width: 45%;
     text-align: center;
-  }
+}
 
+@media screen and (max-width:1024px) {
+    .hero .content .h1 h1 {
+        font-size: 96px;
+        letter-spacing: -.025em;
+        line-height: 88%;
+        text-align: center;
+        font-weight: 600;
+    }
+}
+@media screen and (max-height:1281px) and (min-height:1000px) and (min-width:750px) and (max-width:1068px) {
+    .hero {
+        height: 60vh;
+    }
+}
+@media screen and (max-width:693px) {
+    .hero .content h4 {
+        width: 63%;
+    }
+}
+@media screen and (max-width:800px) {
+    .hero {
+        height: 60vh;
+    }
+}
+@media screen and (max-width:600px) {
+    .hero {
+        height: 60vh;
+    }
+    .hero .content .h1 h1 {
+        font-size: 72px;
+    }
+    .hero .content h4 {
+        width: 370px;
+        font-size: medium;
+    }
+    .hero .content .buttons .signup-button {
+        width: 80%;
+        margin-top: 3rem;
+        font-size: small;
+    }
+}
+@media screen and (max-width:550px) {
+    .hero {
+        height: 50vh;
+    }
+    .hero .content .h1 h1 {
+        font-size: 56px;
+    }
+}
+@media screen and (max-width:400px) {
+    .hero .content .h1 h1 {
+        font-size: 56px;
+    }
+    .hero .content h4 {
+        width: 340px;
+        font-size: medium;
+    }
+    .hero .content .buttons .signup-button {
+        width: 80%;
+        margin-top: 3rem;
+        font-size: small;
+    }
+}
+@media screen and (max-width:350px) {
+    /* .hero {
+        height: 65vh;
+    } */
+    .hero .content .h1 h1 {
+        font-size: 56px;
+    }
+    .hero .content h4 {
+        width: 90%;
+        font-size: small;
+    }
+    .hero .content .buttons .signup-button {
+        width: 80%;
+        margin-top: 3rem;
+        font-size: small;
+    }
+}

@@ -10,7 +10,7 @@ import Navbar from '../navbar/Navbar'
 export default function Home() {
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar color='#0b0c14'></Navbar>
       <Hero></Hero>
       <Section1></Section1>
       <Section2></Section2>

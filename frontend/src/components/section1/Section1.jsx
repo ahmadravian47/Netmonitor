@@ -40,7 +40,7 @@ export default function Section1() {
                             </div>
                             <h2>Uptime monitoring</h2>
                             <p>Check uptime, SSL, ports, DNS, and more. Prevent false positives and get actionable alerts with error screenshots.</p>
-                            <Link href="#" class="learn-more">Learn more &gt;</Link>
+                            <Link to='/signup' class="learn-more">Explore &gt;</Link>
                         </div>
                         <div className="card">
                             <div className="icon incident">
@@ -48,7 +48,7 @@ export default function Section1() {
                             </div>
                             <h2>Incident management</h2>
                             <p>Schedule on-call duties, set up escalation policies, and get alerted via call, Slack and more.</p>
-                            <Link href="#" className="learn-more">Learn more &gt;</Link>
+                            <Link  to='/signup' className="learn-more">Explore &gt;</Link>
                         </div>
                     </div>
                 </div>

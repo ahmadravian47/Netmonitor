@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function User() {
     const [user_monitors, setmonitors] = useState([])
+    const [user_profile, setprofile] = useState([]);
 
     const handleDelete = async (id) => {
         try {
@@ -37,9 +38,23 @@ export default function User() {
             });
     }
 
+    async function getprofile() {
+        axios.get('http://localhost:3000/profile', {
+            withCredentials: true
+        })
+            .then(response => {
+                setprofile(response.data);
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.error('There was an error!', error);
+            });
+    }
+
     useEffect(() => {
-        getallmonitors()
-    },[])
+        getallmonitors();
+        getprofile();
+    }, [])
     return (
         <div className='pa'>
             <div className="logo">
@@ -49,7 +64,11 @@ export default function User() {
             <div className='parent'>
                 <div className='content'>
                     <div className='upper'>
-                        <h2>How has your day been so far, Ahmad?</h2>
+                        <h2>
+                            How has your day been so far, {user_profile && user_profile.length > 0 ? user_profile[0].name.split(' ')[0] : 'Guest'}?
+                        </h2>
+
+
                         <div className='button'>
                             <Link to='/one' className='button'>Create Monitor</Link>
                         </div>
@@ -69,7 +88,7 @@ export default function User() {
                                         </div>
                                     </div>
                                     <div className='right'>
-                                        <i className="fa-regular fa-trash-can" onClick={()=>handleDelete(monitor._id)}></i>
+                                        <i className="fa-regular fa-trash-can" onClick={() => handleDelete(monitor._id)}></i>
                                     </div>
                                 </div>
                             );

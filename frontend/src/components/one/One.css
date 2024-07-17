@@ -15,14 +15,14 @@
     color: white;
 }
 .main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 12rem 0;
 }
 
 .main .content {
-    width: 35%;
+    width: 550px;
     margin: 0 auto;
 }
 .main .content button{
@@ -70,4 +70,32 @@
     padding:  0.5rem;
     border: 1px solid rgb(47 54 71);
     margin-top: 0.5rem;
+}
+
+@media screen and (max-width:600px) {
+    .main .content {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:430px) {
+        .main h2 {
+            font-size: 26px;
+        }
+}
+@media screen and (max-width:350px) {
+    .main h2 {
+        width: 100%;
+        font-size: 22px;
+        line-height: 2rem;
+    }
+    .main form {
+        padding: 1rem;
+        background-color: #222838;
+    }
+}
+@media screen and (max-width:300px) {
+    .main h2 {
+        font-size: 20px;
+    }
 }

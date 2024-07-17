@@ -23,7 +23,7 @@
 }
 
 .parent .content {
-    width: 70%;
+    width: 1080px;
     margin: 0 auto;
     padding-top: 8rem;
 
@@ -31,6 +31,7 @@
 
 .parent .upper {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -71,9 +72,11 @@
     display: flex;
     align-items: center;
 }
-.parent .content .monitors .monitor .left .h5{
+
+.parent .content .monitors .monitor .left .h5 {
     margin-left: 3rem;
 }
+
 .parent .content .monitors .monitor .left .circle {
     width: 12px;
     height: 12px;
@@ -102,4 +105,55 @@
 
 .parent .content .monitors .monitor .right .fa-trash-can {
     color: white;
+}
+
+@media screen and (max-width:1150px) {
+    .parent .content {
+        width: 850px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .parent .content {
+        width: 90%;
+    }
+
+    .parent .upper h2 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .parent .content {
+        width: 95%;
+    }
+
+    .parent .upper h2 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .parent .upper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parent .upper .button{
+        margin-top: 1rem;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .parent .content .monitors .monitor {
+        padding:  1rem;
+    }
+    /* .parent .content .monitors .monitor .left{
+        border: 2px solid red;
+    } */
+    .parent .content .monitors .monitor .left .h5 {
+        margin-left: 1rem;
+    }
+
 }

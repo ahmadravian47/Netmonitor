@@ -7,34 +7,24 @@ import Signup from './components/signup/Signup'
 import One from './components/one/One'
 import './App.css';
 import User from './components/user/User';
+import Product from './components/product/Product'
+import Documentation from './components/documentation/Documentation'
+import Contact from './components/contact/Contact'
+import About from './components/about/About'
 
 function App() {
-    // const [result, setResult] = useState('');
-    // const checkStatus = async (url) => {
-    //     try {
-    //         const response = await fetch('http://localhost:3000/check', {
-    //             method: 'POST',
-    //             headers: { 'Content-Type': 'application/json' },
-    //             body: JSON.stringify({ url })
-    //         });
-    //         const data = await response.json();
-    //         setResult(data.message);
-    //     } catch (error) {
-    //         setResult('Error checking the website');
-    //     }
-    // };
-
     return (
         <div className="App">
-            {/* <h1>Website Status Checker</h1>
-            <Form checkStatus={checkStatus} />
-            <Result result={result} /> */}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/one" element={<One />} />
                 <Route path="/user" element={<User />} />
+                <Route path="/product" element={<Product />} />
+                <Route path="/documentation" element={<Documentation />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/about" element={<About />} />
             </Routes>
         </div>
     );

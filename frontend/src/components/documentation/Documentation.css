@@ -1,0 +1,87 @@
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.container h1 {
+    font-size: 42px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container h5 {
+    font-size: large;
+    color: rgb(146, 157, 185);
+    width: 65%;
+    margin: 1rem auto;
+    text-align: center;
+    font-weight: 400;
+}
+
+.container .buttons {
+    margin: 0 auto;
+}
+
+.container .buttons .button {
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: block;
+    text-align: center;
+    width: 20%;
+    border-radius: 5px;
+    font-size: small;
+    background-color: #6c63ff;
+    color: white;
+}
+@media screen and (max-width:1040px){
+    .container{
+        width: 800px;
+    }
+    .container h5 {
+       width: 70%;
+    }
+    .container .buttons .button{
+        width: 30%;
+    }
+    
+}
+@media screen and (max-width:800px){
+    .container{
+        border: 2px solid white;
+        width: 85%;
+    }
+    .container h1{
+        width: 97%;
+    }
+    .container h5 {
+       width: 80%;
+    }
+    .container .buttons .button{
+        width: 30%;
+    }
+    
+}
+@media screen and (max-width:630px){
+    .container .buttons .button{
+        width: 70%;
+    }
+    
+}
+@media screen and (max-width:550px){
+    .container{
+        width: 95%;
+    }
+    .container h1{
+        font-size: 24px;
+    }
+    .container h5 {
+       width: 95%;
+       font-size: 16px;
+    }
+    .container .buttons .button{
+        width: 70%;
+    }
+    
+}

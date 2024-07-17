@@ -13,7 +13,7 @@
 }
 .body p{
   text-align: center;
-    width: 30%;
+    width: 500px;
     margin: 0 auto;
     color: rgb(146, 157, 185);
 }
@@ -34,4 +34,18 @@
 }
 .body .imagee img{
     width: 100%;
+}
+
+@media screen and (max-width:600px) {
+    .body p{
+       width: 75%;
+      }
+      .body .imagee{
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px) {
+    .body p{
+       width: 85%;
+      }
 }

@@ -13,7 +13,7 @@ export default function Section2() {
       <h2>Status Page</h2>
       <p>Communicates maintenance and incidence updates automatically on dedicated Pages</p>
       <div className='button'>
-        <Link className='learn-button'>Learn more &gt;</Link>
+        <Link to='/signup' className='learn-button'>Get Started &gt;</Link>
       </div>
       <div className='imagee'>
         <img src={i_mage}></img>
