@@ -33,10 +33,32 @@ async function check_url(url) {
         return false;
     }
 }
-
+async function send_email(email) {
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'lens.customer@gmail.com',
+            pass: 'cbagabmmwbzywmqq'
+        }
+    });
+    const mailOptions = {
+        from: 'lens.customer@gmail.com',
+        to: email,
+        subject: 'Your Website is Down',
+        html: `
+            <p>Hi ,Your website suddenly becomes down .Kindly check it  </p>`
+    };
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log('Error sending email:', error);
+        }
+        else{
+            console.log('Email sent to user');
+        }
+    });
+}
 async function checking_always_url() {
     const all_urls = await Monitor.find();
-    
     const updatePromises = all_urls.map(async (url) => {
         try {
             if (await check_url(url.url)) {
@@ -44,22 +66,18 @@ async function checking_always_url() {
             } else {
                 console.log('This URL is down', url);
                 url.status = 'false';
+                send_email(url.email);
             }
-            await url.save(); // Save the updated document
+            await url.save();
         } catch (error) {
             console.error('Error checking URL:', url.url, error);
         }
     });
-
-    // Wait for all updates to complete
     await Promise.all(updatePromises);
 }
-
 setInterval(() => {
     checking_always_url();
 }, 3000);
-
-
 
 app.post('/signup', async (req, res) => {
     const { name, email, password } = req.body;
@@ -210,7 +228,20 @@ app.delete('/deletemonitor/:id', async (req, res) => {
     }
 })
 
-
+app.get('/profile', async (req, res) => {
+    const token = req.cookies.authToken;
+    if (!token) {
+        return res.status(401).json({ message: 'No token provided' });
+    }
+    jwt.verify(token, process.env.JWT_SECRET_KEY, async (err, decoded) => {
+        if (err) {
+            return res.status(401).json({ message: 'Failed to authenticate token' });
+        }
+        const email = decoded.email;
+        const all_data = await User.find({ email: email });
+        res.status(200).json(all_data);
+    });
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
