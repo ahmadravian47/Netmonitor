@@ -15,7 +15,7 @@ export default function Section3() {
             <h1>Downtime ends today</h1>
             <p>  Monitor Your Website Seamlessly, Stay Informed Instantly. </p>
             <div className='buttons'>
-                <Link to="" className='signup-button'>Signup for free </Link>
+                <Link to="/signup" className='signup-button'>Signup for free </Link>
             </div>
         </div>
         </div>

@@ -31,8 +31,8 @@ const Navbar = (props) => {
           <Link to="/contact" className='li'>Contact</Link>
           <Link to="/about" className='li'>About</Link>
         </div>
-        <div className="navbar-brand">
-          <img src={logo}></img>
+        <div className="navbar-brand" >
+          <img onClick={()=>{navigate('/')}} src={logo}></img>
         </div>
         <div className="navbar-links">
           <Link to="/product">Product</Link>

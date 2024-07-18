@@ -22,7 +22,7 @@ mongoose.connect(process.env.DB_STRING)
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors({ credentials: true, origin: 'http://localhost:5173' }));
+app.use(cors({ credentials: true, origin: 'https://netmonitor.netlify.app' }));
 app.use(cookieParser());
 
 async function check_url(url) {

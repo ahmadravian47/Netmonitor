@@ -6,34 +6,14 @@ import icon2 from './icon2.png'
 import { Link } from 'react-router-dom';
 
 export default function Section1() {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-      const showElement = () => {
-        setIsVisible(true);
-      };
-  
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            showElement();
-            observer.unobserve(entry.target);
-          }
-        });
-      });
-  
-      observer.observe(document.querySelector('.fade-up'));
-  
-      return () => observer.disconnect();
-    }, []);
     return (
         <div className='section'>
             <div className='left'>
                 <div className='content'>
-                    <h1 className={`fade-up ${isVisible ? 'active' : ''}`}>Resolve downtime faster than ever.</h1>
-                    <p className={`subtitle fade-up ${isVisible ? 'active' : ''}`}>Monitor everything from websites to servers. Schedule on-call rotations, get actionable alerts, and resolve incidents faster than ever.</p>
+                    <h1 >Resolve downtime faster than ever.</h1>
+                    <p className='subtitle'>Monitor everything from websites to servers. Schedule on-call rotations, get actionable alerts, and resolve incidents faster than ever.</p>
                     <Link to="/signup" class="explore-link">Explore uptime &gt;</Link>
-                    <div className={`card-container fade-up ${isVisible ? 'active' : ''}`}>
+                    <div className='card-container'>
                         <div className="card">
                             <div className="icon uptime">
                                 <img src={icon1}></img>

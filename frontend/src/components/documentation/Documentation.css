@@ -49,7 +49,6 @@
 }
 @media screen and (max-width:800px){
     .container{
-        border: 2px solid white;
         width: 85%;
     }
     .container h1{

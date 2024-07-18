@@ -17,8 +17,8 @@ export default function About() {
                       stack. If you have a product idea and would like me to collaborate
                        on it, please feel free to reach out to me.</p>
                 <div className="hero-buttons">
-                    <Link to='/signup' id="primary">My Portfolio</Link>
-                    <Link to='/signup' id="secondary">My Linkedin</Link>
+                    <Link to='https://www.linkedin.com/in/ahmad-touseef-996788205/' id="primary">My Linkedin</Link>
+                    <Link to='https://ahmadtouseef.netlify.app/' id="secondary">My Portfolio</Link>
                 </div>
             </div>
             <div className='rightsection'>

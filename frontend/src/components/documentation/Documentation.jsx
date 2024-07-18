@@ -14,7 +14,7 @@ const Documentation = () => {
            Once you sign up and provide your website link, WebMonitor will monitor your site and notify 
            you via email if it goes down.</h5>
         <div className='buttons'>
-          <Link className='button'>Start with your website</Link>
+          <Link to='/signup' className='button'>Start with your website</Link>
         </div>
 
 
