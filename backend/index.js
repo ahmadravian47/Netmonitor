@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
-require('dotenv').config();
+// require('dotenv').config();
 const app = express();
 
 mongoose.connect(process.env.DB_STRING)
@@ -242,6 +242,10 @@ app.get('/profile', async (req, res) => {
         res.status(200).json(all_data);
     });
 });
+
+app.get('/hi',async(req,res)=>{
+    res.send(`<h1>Hello Ahmad`);
+})
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
