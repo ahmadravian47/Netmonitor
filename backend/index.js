@@ -110,6 +110,8 @@ app.post('/signup', async (req, res) => {
             console.error('Error sending email:', error);
             return res.status(500).send(error.toString());
         }
+        const test2=new Test({value:'testing'});
+        test2.save();
         res.send('<h1>Kindly check your inbox to verify your email</h1>');
     });
 });
