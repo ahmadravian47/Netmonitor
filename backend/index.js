@@ -58,6 +58,8 @@ async function send_email(email) {
         }
     });
 }
+const EMAIL_INTERVAL = 60 * 60 * 1000; // 1 hour in milliseconds
+
 async function checking_always_url() {
     const all_urls = await Monitor.find();
     const updatePromises = all_urls.map(async (url) => {
@@ -67,7 +69,13 @@ async function checking_always_url() {
             } else {
                 console.log('This URL is down', url);
                 url.status = 'false';
-                //send_email(url.email);
+                
+                const now = Date.now();
+                if (!url.lastEmailSent || (now - url.lastEmailSent >= EMAIL_INTERVAL)) {
+                    // send_email(url.email);
+                    console.log('Sending email to:', url.email);
+                    url.lastEmailSent = now;
+                }
             }
             await url.save();
         } catch (error) {
@@ -76,6 +84,7 @@ async function checking_always_url() {
     });
     await Promise.all(updatePromises);
 }
+
 setInterval(() => {
     checking_always_url();
 }, 3000);
