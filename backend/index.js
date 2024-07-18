@@ -244,7 +244,7 @@ app.get('/profile', async (req, res) => {
 });
 
 app.get('/hi',async(req,res)=>{
-    res.send(`<h1>Hello Ahmad`);
+    res.send(`<h1>Hello Ahmad</h1>`);
 })
 
 const PORT = process.env.PORT || 3000;
