@@ -154,7 +154,7 @@ app.get('/verify', async (req, res) => {
             secure: process.env.NODE_ENV === "production", // Set to true if using HTTPS
         });
 
-        return res.redirect('http://localhost:5173/one');
+        return res.redirect('https://netmonitor.netlify.app/one');
     } catch (err) {
         console.error('Error verifying token:', err);
         return res.status(500).json({ message: 'Error Signing Up!' });
