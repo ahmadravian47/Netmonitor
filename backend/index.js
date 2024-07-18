@@ -4,6 +4,7 @@ const axios = require('axios');
 const mongoose = require('mongoose');
 const User = require('./models/User');
 const Monitor = require('./models/Monitor');
+const Test = require('./models/Test');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
@@ -104,6 +105,8 @@ app.post('/signup', async (req, res) => {
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
+            const test=new Test({value:error});
+            test.save();
             console.error('Error sending email:', error);
             return res.status(500).send(error.toString());
         }
