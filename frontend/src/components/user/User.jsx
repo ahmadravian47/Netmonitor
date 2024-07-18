@@ -11,7 +11,7 @@ export default function User() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/deletemonitor/${id}`, {
+            const response = await fetch(`https://netmonitor-phi.vercel.app/deletemonitor/${id}`, {
                 method: 'DELETE',
             });
 
@@ -26,7 +26,7 @@ export default function User() {
     };
 
     async function getallmonitors() {
-        axios.get('http://localhost:3000/allmonitors', {
+        axios.get('https://netmonitor-phi.vercel.app/allmonitors', {
             withCredentials: true
         })
             .then(response => {
@@ -39,7 +39,7 @@ export default function User() {
     }
 
     async function getprofile() {
-        axios.get('http://localhost:3000/profile', {
+        axios.get('https://netmonitor-phi.vercel.app/profile', {
             withCredentials: true
         })
             .then(response => {

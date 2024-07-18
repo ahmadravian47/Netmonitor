@@ -14,7 +14,7 @@ export default function One() {
     async function handlesubmit(e) {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/addurl', {
+            const response = await fetch('https://netmonitor-phi.vercel.app/addurl', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -136,13 +136,13 @@ app.get('/verify', async (req, res) => {
 
         const authToken = jwt.sign({ id: user_id, name: name, email: email }, process.env.JWT_SECRET_KEY, { expiresIn: '1h' });
 
-        res.cookie('authToken', authToken, {
-            path: '/',
+        res.cookie('authToken', token, {
+            path: "/",
             expires: new Date(Date.now() + 1000 * 3600), // 1 hour
             httpOnly: true,
-            sameSite: 'lax',
-            secure: process.env.NODE_ENV === 'production',
-        });
+            sameSite: "None", // Required for cross-site cookies
+            secure: process.env.NODE_ENV === "production", // Set to true if using HTTPS
+          });
 
         return res.redirect('http://localhost:5173/one');
     } catch (err) {
@@ -164,12 +164,12 @@ app.post('/login', async (req, res) => {
         expiresIn: '1h', // Corrected to '1h'
     });
     res.cookie('authToken', token, {
-        path: '/',
-        expires: new Date(Date.now() + 1000 * 3600),
+        path: "/",
+        expires: new Date(Date.now() + 1000 * 3600), // 1 hour
         httpOnly: true,
-        sameSite: 'lax',
-        secure: process.env.NODE_ENV === 'production',
-    });
+        sameSite: "None", // Required for cross-site cookies
+        secure: process.env.NODE_ENV === "production", // Set to true if using HTTPS
+      });
     return res.status(200).json({
         message: 'Successfully Logged In',
         user: user,
