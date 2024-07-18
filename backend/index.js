@@ -67,7 +67,7 @@ async function checking_always_url() {
             } else {
                 console.log('This URL is down', url);
                 url.status = 'false';
-                send_email(url.email);
+                //send_email(url.email);
             }
             await url.save();
         } catch (error) {
