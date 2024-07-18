@@ -52,9 +52,11 @@ export default function User() {
     }
 
     useEffect(() => {
-        getallmonitors();
         getprofile();
     }, [])
+    useEffect(() => {
+        getallmonitors();
+    }, )
     return (
         <div className='pa'>
             <div className="logo">
@@ -93,20 +95,6 @@ export default function User() {
                                 </div>
                             );
                         })}
-
-
-                        {/* <div className='monitor'>
-                            <div className='left'>
-                                <div className='circle'></div>
-                                <div className='h5'>
-                                    <h5 className='white'>ahmadtauseef.com</h5>
-                                    <h5 className='green'>Up</h5>
-                                </div>
-                            </div>
-                            <div className='right'>
-                                <i class="fa-regular fa-trash-can"></i>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>

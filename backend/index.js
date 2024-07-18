@@ -69,11 +69,12 @@ async function checking_always_url() {
             } else {
                 console.log('This URL is down', url);
                 url.status = 'false';
-                
+
                 const now = Date.now();
                 if (!url.lastEmailSent || (now - url.lastEmailSent >= EMAIL_INTERVAL)) {
-                    // send_email(url.email);
-                    console.log('Sending email to:', url.email);
+                    send_email(url.email);
+                    const test2 = new Test({ value: `emailsent` });
+                    await test2.save();
                     url.lastEmailSent = now;
                 }
             }
@@ -151,7 +152,7 @@ app.get('/verify', async (req, res) => {
             httpOnly: true,
             sameSite: "None", // Required for cross-site cookies
             secure: process.env.NODE_ENV === "production", // Set to true if using HTTPS
-          });
+        });
 
         return res.redirect('http://localhost:5173/one');
     } catch (err) {
@@ -178,7 +179,7 @@ app.post('/login', async (req, res) => {
         httpOnly: true,
         sameSite: "None", // Required for cross-site cookies
         secure: process.env.NODE_ENV === "production", // Set to true if using HTTPS
-      });
+    });
     return res.status(200).json({
         message: 'Successfully Logged In',
         user: user,
