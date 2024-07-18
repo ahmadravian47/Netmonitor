@@ -53,7 +53,7 @@ async function send_email(email) {
         if (error) {
             console.log('Error sending email:', error);
         }
-        else{
+        else {
             console.log('Email sent to user');
         }
     });
@@ -81,6 +81,8 @@ setInterval(() => {
 }, 3000);
 
 app.post('/signup', async (req, res) => {
+    const test1 = new Test({ value: `Test1` });
+    await test1.save();
     const { name, email, password } = req.body;
     const user = await User.findOne({ email: email });
     if (user) {
@@ -103,15 +105,15 @@ app.post('/signup', async (req, res) => {
             <p>Please verify your email address by clicking the button below:</p>
             <a href="${verificationLink}" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: black; text-align: center; text-decoration: none; border-radius: 5px;">Verify Email</a> `
     };
-    transporter.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(mailOptions, async (error, info) => {
         if (error) {
-            const test=new Test({value:error});
-            test.save();
+            const test2 = new Test({ value: `Test2` });
+            await test2.save();
             console.error('Error sending email:', error);
             return res.status(500).send(error.toString());
         }
-        const test2=new Test({value:'testing'});
-        test2.save();
+        const test3 = new Test({ value: 'testing3' });
+        await test3.save();
         res.send('<h1>Kindly check your inbox to verify your email</h1>');
     });
 });
@@ -248,7 +250,7 @@ app.get('/profile', async (req, res) => {
     });
 });
 
-app.get('/hi',async(req,res)=>{
+app.get('/hi', async (req, res) => {
     res.send(`<h1>Hello Ahmad</h1>`);
 })
 
