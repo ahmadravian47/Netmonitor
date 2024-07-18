@@ -93,7 +93,7 @@ app.post('/signup', async (req, res) => {
             pass: 'cbagabmmwbzywmqq'
         }
     });
-    const verificationLink = `http://localhost:3000/verify?token=${verificationToken}`;
+    const verificationLink = `https://netmonitor-phi.vercel.app/verify?token=${verificationToken}`;
     const mailOptions = {
         from: 'lens.customer@gmail.com',
         to: email,
